@@ -27,9 +27,7 @@ The final dense layer consists of 7 neurons, each representing one of the classe
 The majority of the images (80%) were used for training, with the remaining 20% used for refining the model and testing the model after the initial training. Using Tensorflow and Keras, we trained the model using a convolutional neural network. This model was then tuned using a Keras tuner called Hyperband.
 
 ## Using Heatmaps to Visualize the Model
-![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/lauradudley/Documents/GitHub/Machine_Learning_Emotion_Recognition/output/cam_angry_2.jpg?version%3D1710302490334)
-![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/lauradudley/Documents/GitHub/Machine_Learning_Emotion_Recognition/output/cam_happy_2.jpg?version%3D1710302505776)
-![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/lauradudley/Documents/GitHub/Machine_Learning_Emotion_Recognition/output/cam_sad.jpg?version%3D1710302527170)
+
 We generated heatmaps showing the areas focused on by the model, which give a great visual representation of the way the model learned to focus on the areas of a face with the most information. Since expression is conveyed by a combination of eyes, eyebrows, lips and even the nose, it’s interesting to see the way the model learned to focus on these elements after 3 convolutional layers.
 
 
