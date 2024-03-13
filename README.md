@@ -14,10 +14,15 @@ Our dataset had over 35,000 images depicting just faces, centered in the image, 
 ## Training and Refining Our Model
 
 The model was run with 3 convolutional layers, with a max pooling layer after each convolutional layer. 
-**Layer 1:** applied filters and specified shape & grayscale channel
-**Layer 2:** applied twice as many filters to previous layer
-**Layer 3:** applied 4 times as many layers as first layer
+
+-**Layer 1:** applied filters and specified shape & grayscale channel
+
+-**Layer 2:** applied twice as many filters to previous layer
+
+-**Layer 3:** applied 4 times as many layers as first layer
+
 The max pooling layers reduced the spacial dimensions and extracted the most important features of each layer.
+
 **Flatten Layer:** This layer flattens the 3D output tensor from the convolutional layers into a 1D tensor, which can be fed into the subsequent fully connected layers. 
 
 Essentially, the image passes through convolution layers, with the global average pooling giving single value, weighted summation (weighted importance), normalization, and visualization heat map of activation values over input image.
@@ -37,11 +42,13 @@ We generated heatmaps showing the areas focused on by the model, which give a gr
 After the model was trained and tuned, we were able to get our test to about 85% accuracy for some emotions, however the process was extremely time-consuming and we ran into several issues along the way. Other emotions were not identified well, which probably could be resolved with more epochs, or by shuffling the data.
 We did not shuffle our data, so the model was trained in the order the files were presented in the training folders. This could affect the model in several ways: 
 
-_Sequential Bias:_ If the training data is presented to the model in a fixed order without shuffling, the model may develop a bias towards patterns or trends present in the data sequence. For example, if similar instances are grouped together in the dataset, the model might learn to prioritize certain patterns over others, potentially leading to overfitting on specific subsets of the data.
-_Learning Dynamics:_ The order in which data is presented can influence the trajectory of the model's optimization process. 
-_Generalization Performance:_ The order of input data can impact the model's ability to generalize to unseen examples. If the training data is presented in a biased order that does not adequately represent the true distribution of the data, the model may struggle to generalize well to new, unseen instances.
+-_Sequential Bias:_ If the training data is presented to the model in a fixed order without shuffling, the model may develop a bias towards patterns or trends present in the data sequence. For example, if similar instances are grouped together in the dataset, the model might learn to prioritize certain patterns over others, potentially leading to overfitting on specific subsets of the data.
+
+-_Learning Dynamics:_ The order in which data is presented can influence the trajectory of the model's optimization process. 
+
+-_Generalization Performance:_ The order of input data can impact the model's ability to generalize to unseen examples. If the training data is presented in a biased order that does not adequately represent the true distribution of the data, the model may struggle to generalize well to new, unseen instances.
 
 ## Conclusion and Potential Applications
 Overall, this was an interesting first foray into computer vision, and we can see several ways in which this model can be refined for different uses. It could help to predict the emotions in a crowd by scanning security cameras, or be used as an aid in helping neurodivergent people train their brains to work with emotions. It could even be used as a way for actors to refine their emoting ability, by giving feedback on how well they express a target emotion. 
 
-There are always ethical implications with machine learning, and that’s even more true with facial information, so any future uses or applications should always be considered thoughtfully and carefully before being implemented. For a longer exploration of this, please see Ian’s discussion on the implications of facial recognition in the final three slides of our Powerpoint presentation.
+There are always ethical implications with machine learning, and that’s even more true with facial information, so any future uses or applications should always be considered thoughtfully and carefully before being implemented. For a longer exploration of this, please see Ian’s discussion on the implications of facial recognition in the final three slides of our Powerpoint presentation. [powerpoint presentation](https://github.com/johnnycapra/Machine_Learning_Emotion_Recognition/blob/main/ASU%20Project%204.pptx)
