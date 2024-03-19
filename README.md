@@ -55,6 +55,6 @@ There are always ethical implications with machine learning, and that’s even m
 
 ## References 
 - https://github.com/jacobgil/keras-cam
--https://www.kaggle.com/datasets/chiragsoni/ferdata/data
+- https://www.kaggle.com/datasets/chiragsoni/ferdata/data
 - https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
   
